@@ -22,8 +22,6 @@ public class SimpleJDBC {
                                     "location VARCHAR(50))";
             statement.execute(createTableSQL);
             System.out.println("Table 'students' created successfully.");
-
-           
             String insertRow1 = "INSERT INTO students (roll_no, name, location) " +
                                 "VALUES ('05L8', 'S Pranav', 'NagarKurnool')";
             String insertRow2 = "INSERT INTO students (roll_no, name, location) " +
