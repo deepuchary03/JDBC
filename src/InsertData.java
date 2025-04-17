@@ -1,6 +1,5 @@
 import java.sql.*;
 import java.util.Scanner;
-
 public class InsertData {
     public static void main(String[] args) {
         try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/chary", "root", "5025");
@@ -17,9 +16,7 @@ public class InsertData {
             String saddr = sc.nextLine();
             String insertQuery = "INSERT INTO student VALUES(" + sid + ",'" + sname + "','" + saddr + "')";
             s.executeUpdate(insertQuery);
-
             System.out.println("Data inserted successfully into student table");
-
         } catch (SQLException err) {
             System.out.println("ERROR: " + err);
         }
